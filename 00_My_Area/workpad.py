@@ -29,7 +29,7 @@ my_integer = 10
 my_float = 10.0
 
 my_string = "hello world!"
-#single or double quotation marks can be used to define a string
+#single or double quotation marks can be used to define a string (both quotation mark types treated the same)
 
 my_boolean = True
 #Boolean is either True or False (with capital first letter)
@@ -58,3 +58,28 @@ print (type(my_tuple))
 
 #Do a Boolean (true or false) check to see if a value is (true) or is not (false) a certain data type using the isinstance() function
 isinstance (my_string, str)
+
+
+#strings (cont.) - strings are immutable, once declared to a variable they cannot be edited and instead must be reassigned
+
+#strings can span muliple lines by putting in or triple quotes ('''x''' or """x""") - prevents need to use \ to move to a new line
+my_multiline_string = """hello
+world
+again!"""
+
+#if there are quotation marks in the string, you can use the alternate type use to mark the start and end of the string
+my_quote = "he said 'sorry'"
+#or you can use an escape (\) before the quotation mark to identify its not the start or end of the string
+my_quote_revised = "he said \"sorry\""
+
+#the "in" operator can be use to check if combinations of charecters exist in a string (return bool True or False)
+print('world' in my_multiline_string)
+
+#the "len" oeprator can be used to check the length of a sting
+print(len(my_multiline_string))
+
+#each character in a string has a position called an index. The index is zero-based, meaning that the index of the first character of a string is 0
+#To retrive a specific charecter in a string, you can use its index using square [x]
+print(my_multiline_string[3]) 
+#you can also use negative indexing to work your way back from the end of the string [-x]
+print(my_multiline_string[-4]) 
