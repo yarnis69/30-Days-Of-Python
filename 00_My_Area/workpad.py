@@ -83,3 +83,5 @@ print(len(my_multiline_string))
 print(my_multiline_string[3]) 
 #you can also use negative indexing to work your way back from the end of the string [-x]
 print(my_multiline_string[-4]) 
+
+#merge
