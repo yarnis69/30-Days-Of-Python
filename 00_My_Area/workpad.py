@@ -81,7 +81,28 @@ print(len(my_multiline_string))
 #each character in a string has a position called an index. The index is zero-based, meaning that the index of the first character of a string is 0
 #To retrive a specific charecter in a string, you can use its index using square [x]
 print(my_multiline_string[3]) 
+
 #you can also use negative indexing to work your way back from the end of the string [-x]
 print(my_multiline_string[-4]) 
 
-#merge
+#you can combine strings into a new variable using the "+" operator (concatenation/cat)
+my_str_1 = 'red'
+my_str_2 = 'lorry'
+my_cat_str = my_str_1 + ' ' + my_str_2
+print(my_cat_str)
+
+#you can only cat strings, if you cat a non string value like an integer, you can convert into a string using the str() operator
+mileage = 50000
+my_cat_str_2 = my_str_1 + ' ' + my_str_2 + ' ' + str(mileage)
+print(my_cat_str_2)
+
+#you can combine strings and update an exising varible with the new value using the '+=' operator
+full_name = 'Andy'
+full_name += ' Jones'
+print(full_name) # full_name variable is now Andy Jones
+
+#interpolation: you can add variables directly into strings by using f-strings (formatted strings) - these are denoted by an f before the string starts and allow variables to be inserted within {}
+#note you do not need to manually convert other data types such as integers into strings via the str() operator, this is done automatically by f-strings
+my_age = 40
+my_introduction = f'hello my name is {full_name} and I am {my_age} years old'
+print(my_introduction)
