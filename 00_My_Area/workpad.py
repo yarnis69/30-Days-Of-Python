@@ -106,3 +106,16 @@ print(full_name) # full_name variable is now Andy Jones
 my_age = 40
 my_introduction = f'hello my name is {full_name} and I am {my_age} years old'
 print(my_introduction)
+
+#you can "slice" stings (extract a certain part of a sting) by declaring a start and stop index (start:stop)
+#remember that the first letter is index 0, and the stop value is not inclusive (so will return up to the last letter before)
+print(my_cat_str_2[0:3]) # this returns "red"
+
+#if you omit the start or stop value, it defualts start to 0 and and stop to the end of the string
+print(my_cat_str_2[:3]) # this also returns "red"
+print(my_cat_str_2[3:]) # this returns the string starting after red
+
+#you can also add a step permiter to the slice to extract for example each 2nd charecter (start:stop:step)
+print(my_cat_str_2[0:3:2]) # this returns "rd"
+#if you leave start and stop blank, and use -1 as the step, returns the whole string in reverse (::-1)
+print(my_cat_str_2[::-1])
