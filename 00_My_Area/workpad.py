@@ -107,6 +107,7 @@ my_age = 40
 my_introduction = f'hello my name is {full_name} and I am {my_age} years old'
 print(my_introduction)
 
+
 #you can "slice" stings (extract a certain part of a sting) by declaring a start and stop index (start:stop)
 #remember that the first letter is index 0, and the stop value is not inclusive (so will return up to the last letter before)
 print(my_cat_str_2[0:3]) # this returns "red"
@@ -119,3 +120,18 @@ print(my_cat_str_2[3:]) # this returns the string starting after red
 print(my_cat_str_2[0:3:2]) # this returns "rd"
 #if you leave start and stop blank, and use -1 as the step, returns the whole string in reverse (::-1)
 print(my_cat_str_2[::-1])
+
+
+#python provides useful string functions, such as .upper() to convert a whole string to uppercase
+my_new_string = 'hello dave'
+my_new_string_uppercase = my_new_string.upper()
+print(my_new_string_uppercase) # returns 'HELLO DAVE'
+
+#.strip('x') returns a new string with the specificed leading and trailing charecters removed
+print (my_trimmed_string) (if none declared removes whitespace only)
+my_trimmed_string = my_new_string.strip('h')
+print (my_trimmed_string) #returns 'ello dave'
+
+#.replace('old, 'new') replaces specific charecter sequences within a string with a new value
+my_amended_string = my_new_string.replace('hello', 'hi')
+print(my_amended_string) # returns "hi dave"
