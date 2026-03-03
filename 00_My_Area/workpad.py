@@ -127,8 +127,7 @@ my_new_string = 'hello dave'
 my_new_string_uppercase = my_new_string.upper()
 print(my_new_string_uppercase) # returns 'HELLO DAVE'
 
-#.strip('x') returns a new string with the specificed leading and trailing charecters removed
-print (my_trimmed_string) (if none declared removes whitespace only)
+#.strip('x') returns a new string with the specificed leading and trailing charecters removed (if none declared removes whitespace only)
 my_trimmed_string = my_new_string.strip('h')
 print (my_trimmed_string) #returns 'ello dave'
 
