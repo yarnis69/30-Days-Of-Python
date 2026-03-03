@@ -127,6 +127,14 @@ my_new_string = 'hello dave'
 my_new_string_uppercase = my_new_string.upper()
 print(my_new_string_uppercase) # returns 'HELLO DAVE'
 
+#.capitalize() converts the first letter of a string only to uppercase
+my_new_string_capitalised = my_new_string.capitalize()
+print(my_new_string_capitalised) # returns 'Hello dave'
+
+#.title() convers the first letter of each word to uppercase (i.e. title case)
+my_new_string_titlecase = my_new_string.title()
+print(my_new_string_titlecase) # returns 'Hello Dave'
+
 #.strip('x') returns a new string with the specificed leading and trailing charecters removed (if none declared removes whitespace only)
 my_trimmed_string = my_new_string.strip('h')
 print (my_trimmed_string) #returns 'ello dave'
@@ -141,5 +149,29 @@ print(my_split_string_list) # returns a list containing 'hello' and 'dave'
 
 #.join() is used to join values in an iterable such as a list into a single string, seprated by a defiend value
 # syntax is 'seperator'.join(my_iterable)
-my_fixed_sting = ' '.join(my_split_string_list)
-print(my_fixed_sting)
+my_fixed_string = ' '.join(my_split_string_list)
+print(my_fixed_string)
+
+#.startswith('x') checks if a string starts with a specific prefix, returns a bool True or False
+starts_with_hello = my_fixed_string.startswith('hello')
+print(starts_with_hello) # returns True as "hello dave" starts with "hello"
+
+#.endswith('x') does the same for the suffix
+ends_with_hello = my_fixed_string.endswith('dave')
+print(ends_with_hello)
+
+#.find('x') searches a string for a substring, and returns the index of its first occurence (returns -1 if not found)
+find_dave = my_fixed_string.find('dave')
+print(find_dave) #returns an index of 6
+
+#.count('x') counts the amoutn of times a substring appears in a string, and returns the total
+count_dave = my_fixed_string.count('dave')
+print(count_dave) # returns 1 as dave appears in the string once
+
+#.isupper() returns a bool True if all charecters are uppercase, false if any are not
+check_if_uppercase = my_fixed_string.isupper()
+print(check_if_uppercase) # returns false as it contains lowercase charecters
+
+#.islower() does the same bool check to see if all charecters are lowercase
+check_if_lowercase = my_fixed_string.islower()
+print(check_if_lowercase) # returns True as it contains all charecters are lowercase
