@@ -134,3 +134,12 @@ print (my_trimmed_string) #returns 'ello dave'
 #.replace('old, 'new') replaces specific charecter sequences within a string with a new value
 my_amended_string = my_new_string.replace('hello', 'hi')
 print(my_amended_string) # returns "hi dave"
+
+#.split('x') breaks down a string into a list of strings, using the specificed value as the seperator (if none declared defaults to whitespace)
+my_split_string_list= my_new_string.split()
+print(my_split_string_list) # returns a list containing 'hello' and 'dave'
+
+#.join() is used to join values in an iterable such as a list into a single string, seprated by a defiend value
+# syntax is 'seperator'.join(my_iterable)
+my_fixed_sting = ' '.join(my_split_string_list)
+print(my_fixed_sting)
