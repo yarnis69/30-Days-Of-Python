@@ -4,14 +4,6 @@ print ("hello Dave")
 print ('Tom', 'Dick', 'and Harry')
 
 
-#basic maths with answers output via the print function
-print(1+2) #addition
-print(5-1) #subtraction
-print(5*2) #multiplication
-print(6/2) #division
-print(5**2) #raise to a power
-
-
 #create variables and their associated values e.g. time_zone = 'GMT'
 #note: variable name cannot have spaces, cannot start with a number, cannot use python keywords, are case sensitive, and text values must be in quotation marks ('' or "") (strings)
 time_zone='GMT'
@@ -60,7 +52,7 @@ print (type(my_tuple))
 isinstance (my_string, str)
 
 
-#strings (cont.) - strings are immutable, once declared to a variable they cannot be edited and instead must be reassigned
+#strings - strings are immutable, once declared to a variable they cannot be edited and instead must be reassigned
 
 #strings can span muliple lines by putting in or triple quotes ('''x''' or """x""") - prevents need to use \ to move to a new line
 my_multiline_string = """hello
@@ -175,3 +167,52 @@ print(check_if_uppercase) # returns false as it contains lowercase charecters
 #.islower() does the same bool check to see if all charecters are lowercase
 check_if_lowercase = my_fixed_string.islower()
 print(check_if_lowercase) # returns True as it contains all charecters are lowercase
+
+
+
+#Numbers and Mathmatical operations
+
+#reminder of basic maths with answers output via the print function
+print(1+2) #addition
+print(5-1) #subtraction
+print(5*2) #multiplication
+print(6/2) #division
+print(5**2) #raise to a power
+
+#if you use an integer and a float in arithmetic, the answer automatically converts to a float
+my_integer_1 = 8
+my_float_1 = 0.6
+my_sum_1 = my_integer_1 + my_float_1
+print(my_sum_1) # resolves to a float of 8.6
+
+#modulo operator (%) returns the remainder when the value on the left is divided by the value on the right
+my_integer_2 = 5
+my_mod_sum = my_integer_1 % my_integer_2
+print(my_mod_sum) # returns a remainder of 3
+
+#floor division (//) divides two numbers (integer or float) and always rounds down to nearest whole integer
+my_fd_sum = my_integer_1 // my_integer_2
+print(my_fd_sum)
+
+#float() function can convert a number in another format (int, string) into a float
+my_float_2 = float(my_integer_2)
+print(my_float_2) # returns a float of 5.0
+
+#int() function does the same conversion into an integer
+my_integer_3 = int(my_float_2)
+print(my_integer_3) # returns a integer of 5
+
+#round() can be used to round a float to defined number of decimal places (by default rounds to nearest whole integer)
+my_float_3 = 9.62
+my_rounded_float_1 = round(my_float_3) # rounds to nearest whole integer (10
+my_rounded_float_2 = round(my_float_3, 1) # rounds to the nearest 10th an integer (9.6)
+print(my_rounded_float_1)
+print(my_rounded_float_2)
+
+#abs() returns the absolute value of a number (removes the polarity of numbers, -5 becomes 5)
+my_integer_4 = -10
+my_abs_integer = abs(my_integer_4)
+print(my_abs_integer) # returns 10
+
+#pow() is an alternative way to raise to a power (**)
+exp_sum_1 = pow(5, 2) #
