@@ -214,5 +214,10 @@ my_integer_4 = -10
 my_abs_integer = abs(my_integer_4)
 print(my_abs_integer) # returns 10
 
-#pow() is an alternative way to raise to a power (**)
-exp_sum_1 = pow(5, 2) #
+#pow() is an alternative way to raise to a power (**) when used with 2 variables
+exp_sum_1 = pow(5, 2) # returns 25 (5**2)
+print(exp_sum_1)
+
+#using 3 variables is the same as raising the first value to the power of the second, then performing a modular calcuation with the result
+exp_sum_2 = pow(5,2,10) #  returns 5 (5**2 = 25 | 25 % 10 = a remainder of 5)
+print(exp_sum_2)
