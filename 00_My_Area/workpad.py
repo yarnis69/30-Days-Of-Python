@@ -221,3 +221,14 @@ print(exp_sum_1)
 #using 3 variables is the same as raising the first value to the power of the second, then performing a modular calcuation with the result
 exp_sum_2 = pow(5,2,10) #  returns 5 (5**2 = 25 | 25 % 10 = a remainder of 5)
 print(exp_sum_2)
+
+#you can apply a mathmatical operation to edit an exisiting varible using (+=) (-=) etc.
+my_number = 10
+my_number += 5
+print(my_number) # my_number is now 15 [10 + 5]
+my_number *= 2
+print(my_number) #my_number is now 30 [(10 + 5) * 2]
+#you can also use some augmented assignments on strings (+= and *=)
+my_string_2 = 'hello '
+my_string_2 *= 3
+print (my_string_2) #returns 'hello hello hello)
