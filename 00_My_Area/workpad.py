@@ -293,11 +293,11 @@ skint = False
 
 if hungry:
     if skint == False:
-        print ('order a takeaway')
+        print ('order a takeaway champ!')
     else:
-        print ('do not order a takeaway')
+        print ('do not order a takeaway, your skint!')
 else:
-    print('do not order a takeaway')
+    print('do not order a takeaway, your not hungry!')
 
 #in python, None, False, 0, 0.0 and empty strings ('') are considered logically False
 #evey other value is considered logically True (all values in Python are logically True or False)
