@@ -232,3 +232,62 @@ print(my_number) #my_number is now 30 [(10 + 5) * 2]
 my_string_2 = 'hello '
 my_string_2 *= 3
 print (my_string_2) #returns 'hello hello hello)
+
+
+#conditional statements and logical operators 
+
+#comparison operators (returns bool true or false)
+value_1 = 10
+value_2 = 15
+print(value_1 == value_2) # checks if values are equal (True or False)
+print(value_1 != value_2) # checks if values are not equal
+print(value_1 > value_2) # checks if value on left is greater than the value on the right
+print(value_1 < value_2) # checks if value on the left is less than the value on the right
+print(value_1 >= value_2) # checks if value on left is greater or equal to value on the right
+print(value_1 <= value_2) # checks if value on left is less or equal to value on right
+
+#the (if) keyword creates a conditional, which performs a check and executes a code block if the condition is true
+#'if' conditions need to be terminated with a (:)
+#the code block is defined using an single indent
+
+age = 20
+if age >= 18:
+    print('you are an adult')
+
+#the (else:) keyword can be used to define an code block to run if the condition is False
+age = 15
+if age >= 18:
+    print('you are an adult')
+else:
+    print('you are a child')
+
+#(elif) can be used to define a second condition, which is checked if condition 1 is False
+#you can still follow with and (else:) code block, which will execute if both are False
+
+age = 14
+if age >=18:
+    print('you are an adult')
+elif age >=13:
+    print('you are a teenager')
+else:
+    print('you are a child')
+
+#you can use as many (elif) statements as you like
+age = 6
+if age >=18:
+    print('you are an adult')
+elif age >=13:
+    print('you are a teenager')
+elif age >=5:
+    print ('you are a child')
+else:
+    print('you are a infant')
+
+
+
+
+
+#note: you can use the 'pass' as a placeholder in a mandatory code block that will be defined later
+
+
+
