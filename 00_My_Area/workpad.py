@@ -13,6 +13,9 @@ print(time_zone)
 print(name)
 print(age)
 
+#you can print multiple values at once by seperating them with (,)
+print (name, " ", age, " ", time_zone)
+
 
 #Basic data types in Python
 
@@ -336,3 +339,15 @@ if hungry and not skint:
     print ('order a takeaway')
 else:
     print ("don't order a takeaway")
+
+# Python considers (and) statements before (or) statements, when you need to contorl the order of assessment, use ()
+# Without (), the below would not assess if is_member is True before considering the Truth of the (and) condition
+
+age = 21
+show_time = "Evening"
+is_member = False
+
+if age >= 21 or age >= 18 and (show_time != "Evening" or is_member):
+    print("Ticket booking condition satisfied")
+else: 
+    print("Ticket booking failed due to restrictions")
