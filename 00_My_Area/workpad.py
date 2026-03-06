@@ -304,3 +304,35 @@ else:
 #you can check if logically True or False using bool()
 print(bool(0)) # returns False
 print(bool(5)) # returns True
+
+#when the (and) operator is used, both/all conditions need to be True for the expression to be True (and trigger the code block)
+
+hungry = True
+skint = False
+
+if hungry and skint == False:
+    print ('order a takeaway')
+else:
+    print ("don't order a takeaway")
+
+
+# when the (or) operator is used, if any condition is True the expression is true
+
+age = 18
+is_student = False
+
+if age <= 18 or is_student:
+    print("you are eligible for a student discount")
+else:
+    print("you are not eligible for a student discount")
+
+# the (not) operator inverts the result, turning True to False and visa versa
+# use to invert the logic i.e. execute code if result is False
+
+hungry = True
+skint = False
+
+if hungry and not skint:
+    print ('order a takeaway')
+else:
+    print ("don't order a takeaway")
