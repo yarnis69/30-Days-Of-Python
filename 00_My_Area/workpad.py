@@ -283,11 +283,24 @@ elif age >=5:
 else:
     print('you are a infant')
 
-
-
-
-
 #note: you can use the 'pass' as a placeholder in a mandatory code block that will be defined later
 
+#you can use indentation to check if multiple conditions are true to trigger a code block
+#note that "if hungry:" defaults to check if the value is True (you don't need to add == True)
 
+hungry = True
+skint = False
 
+if hungry:
+    if skint == False:
+        print ('order a takeaway')
+    else:
+        print ('do not order a takeaway')
+else:
+    print('do not order a takeaway')
+
+#in python, None, False, 0, 0.0 and empty strings ('') are considered logically False
+#evey other value is considered logically True (all values in Python are logically True or False)
+#you can check if logically True or False using bool()
+print(bool(0)) # returns False
+print(bool(5)) # returns True
