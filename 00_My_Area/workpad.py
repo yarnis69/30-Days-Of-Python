@@ -351,3 +351,107 @@ if age >= 21 or age >= 18 and (show_time != "Evening" or is_member):
     print("Ticket booking condition satisfied")
 else: 
     print("Ticket booking failed due to restrictions")
+
+
+# functions and scopes
+# funcitons are reuseble pieces of codes triggered by keywords e.g. print()
+
+# another key function is input('prompt message') - which prompts the user for an input value
+
+name = input('what is your name? ')
+print('hello ', name)
+
+# int() converts a any value into an integer
+print(int(3.11)) # returns 3
+print(int(True)) # returns 1
+print(int(False)) # returns 0
+
+# you can create your on functions using the def keyword
+# syntax is - def function_name(): - indented code block for function
+def hello():
+    print('Hello World')
+
+hello() # now returns "Hello World"
+
+#you can also define required function parameters in the brackets following the function name
+def calc_sum(a,b):
+    print(a+b)
+
+calc_sum(10, 5) # returns 15 as we provide arguments of 10 and 5
+
+
+#the return keyword is used to make a funciton return a value
+#in the above example, the function prints a result, it doesn't return a value that can for example be assigned to a variable
+def calc_sum(a,b):
+    return(a+b)
+
+calc_sum(10,5) # still returns 15, but can now be assigned to a varible
+my_sum = calc_sum(10,15) # without the return keyword it would retrun 'None'
+
+
+
+#Scopes define where varibles are defined/valid in your code (LEGB)
+
+#Local Scope - varibles created in defined funtions are only valid within that funciton
+def my_function():
+    my_local_varible = 'Cheese'
+    print(my_local_varible) # this works when called within the function
+
+print(my_local_varible) # this DOES NOT WORK, as my_local_varible is only defined within the my_funciton
+
+
+#Enclosing Scope - inner functions nested inside outer functions can access the outer functions varibles
+
+def my_function():
+    my_local_varible = 'Cheese'
+    
+    def my_inner_function():
+        print(my_local_varible)
+    
+    my_inner_function()
+
+my_function #the inner function can access my_local_variable (note the my_inner_function is only valid with my_function)
+
+# note outer funcitons CANNOT access varibles defined by inner functions, only the other way round
+# however, you can define a varible in the outer function, and import/update it in the inner funciton using the nonlocal keyword
+
+def outer_func():
+    greeting = 'Hello Dave'
+    response = ''
+    
+    def inner_func():
+        nonlocal response # this imports the response varible from the outer function
+        response = ' Alright mate'
+    
+    inner_func() # this calls the inner function now it has been defined
+    print(greeting, response)
+
+outer_func() #this calls the outer function now it has been defined
+
+
+# Global scopes are varibles defined outside of fuctions and are valid everywhere
+# i.e. varibles you'll define at the start of your code
+
+name = 'John Smith'
+
+# you can access/update a global varible inside a function, using the global keyword
+
+name = 'John Smith'
+
+def update_name():
+    global name # imports global variable
+    name = 'Jo Bloggs' # updates global variable
+
+update_name()
+print(name)
+
+# you can also create a new varible inside a funciton and make it global using the keyword
+
+def new_name():
+    global new_name
+    new_name = 'Frank Williams'
+
+new_name()
+print(new_name)
+
+#Built in scope - Python's built in keywords, modules and functions accessible everywhere e.g. print(), int() 
