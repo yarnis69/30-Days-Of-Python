@@ -1,9 +1,9 @@
 #variables
 
-distance_mi = 8
+distance_mi = int(input ("how many miles is your commute? "))
 is_raining = False
 has_bike = True
-has_car = False
+has_car = True
 has_ride_share_app = False
 
 #app logic - can I commute
