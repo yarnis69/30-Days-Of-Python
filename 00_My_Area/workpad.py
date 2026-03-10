@@ -379,6 +379,15 @@ def calc_sum(a,b):
 
 calc_sum(10, 5) # returns 15 as we provide arguments of 10 and 5
 
+#you can assign a default value to a parameter using (=)
+
+def calc_sum(a,b=5):
+    print(a+b)
+
+calc_sum(10) # still returns 15 as the second value defaults to 5 unless defined when func is called
+
+
+
 
 #the return keyword is used to make a funciton return a value
 #in the above example, the function prints a result, it doesn't return a value that can for example be assigned to a variable
@@ -455,3 +464,16 @@ new_name()
 print(new_name)
 
 #Built in scope - Python's built in keywords, modules and functions accessible everywhere e.g. print(), int() 
+
+# str.maketrans(x,y) takes two strings of equal length and returns a table mapping each char of the 1st with the corresponding in the 2nd
+# for each charecter it returns a unicode ordinal (unique idenfier for each char)
+alphabet = 'abcdefg'
+shifted_alphabet = 'cdefghi'
+translation_table = str.maketrans(alphabet,shifted_alphabet)
+print(translation_table) # the unicode ordinal is two higher for each shifted alphabet value
+
+# .translate() can then be used to covert a string using the created translation table (replaces char in the 1st string with its corresponding value in the 2nd)
+# syntax is string_to_be_translated.translate(exisiting_translation_table)
+
+trans_string = "hello world"
+print(trans_string.translate(translation_table)) # returns "hgllo worlf"
