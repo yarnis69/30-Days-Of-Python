@@ -3,6 +3,8 @@ print ("hello Dave")
 #can print multiple values by seperating with commas (Python auto adds a space)
 print ('Tom', 'Dick', 'and Harry')
 
+#\n moves a string to the next line
+print("first line \nsecond line \nthird line")
 
 #create variables and their associated values e.g. time_zone = 'GMT'
 #note: variable name cannot have spaces, cannot start with a number, cannot use python keywords, are case sensitive, and text values must be in quotation marks ('' or "") (strings)
