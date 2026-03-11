@@ -19,6 +19,22 @@ print(my_list[0:1])
 my_list [0] = 'Frank'
 print(my_list) # now returns Frank, Dick, Harry
 
+#you can delete individual entries in a list using the del keyword
+#syntax is del list_name [index]
+del my_list [2]
+print(my_list) # now returns Frank, Dick (Harry has been deleted)
+
+#use the in operator to check if a value is in a list (Bool)
+print('Dick' in my_list) # returns True as Dick is in the list
+
+#you can also the list() keyword to convert an exisiting iterable into a list
+my_string = 'William'
+my_new_list = list(my_string)
+print(my_new_list) # as each charecter in a string can be iterated on, returns W,i,l,l,i,a,m
+
+#the len() operator can be used on a list to retrive the number of entires in it
+print(len(my_new_list))
+
 my_range = range(1, 11, 1)
 #ranges generate a range object, which contains a start value, end value (non inclusive) and a step value
 #syntax is range(start, stop, step) - step defaults to 1
