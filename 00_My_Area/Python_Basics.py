@@ -48,7 +48,7 @@ my_none = None
 
 my_range = range(1, 11, 2)
 #creates a range of numbers (useful in loops etc), first value is the start number, second is the stop and third is the step between values
-#my_range would retern 1, 3, 5, 7 and 9 (starts at 1, steps by 2 and ends at 10 (stop value is not inclusive)
+#my_range would return 1, 3, 5, 7 and 9 (starts at 1, steps by 2 and ends at 10 (stop value is not inclusive))
 
 #check the data type of a varible using the type() funtion
 print (type(my_tuple))
