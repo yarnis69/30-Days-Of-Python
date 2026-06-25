@@ -305,7 +305,7 @@ else:
     print('do not order a takeaway, your not hungry!')
 
 #in python, None, False, 0, 0.0 and empty strings ('') are considered logically False
-#evey other value is considered logically True (all values in Python are logically True or False)
+#every other value is considered logically True (all values in Python are logically True or False)
 #you can check if logically True or False using bool()
 print(bool(0)) # returns False
 print(bool(5)) # returns True
