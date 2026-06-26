@@ -42,3 +42,20 @@ my_range = range(1, 11, 1)
 #if you were to convert a range object to a list, it returns all values in that range
 print(list(my_range)) # returns 1,2,3,4,5,6,7,8,9,10
 
+
+#you can nest lists inside lists
+my_nested_list = ["red", "green", ["light blue", "dark blue"]]
+
+#you can then provide an index for the outer and inner list to retrive an entry
+print(my_nested_list[2][1]) # returns 'dark blue'
+
+
+#you can assign list entries to new variables in turn, known as unpacking lists
+employee_481 = ['Matthew', '36', 'Security Consultant']
+name, age, job_title = employee_481 #this created 3 new variables and assigns them list entires in turn
+print(f'{name} is {age} and works as a {job_title}')
+
+# using an astrisk (*) assigns all remaining list values to a variable
+employee_481 = ['Matthew', '36', 'Security Consultant', 'Legend']
+name, age, *job_title = employee_481 # job_title is now assigned a list containing the last two values
+print(f'{name} is {age} and works as a {job_title}')
