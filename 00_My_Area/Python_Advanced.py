@@ -63,6 +63,11 @@ employee_481 = ['Matthew', '36', 'Security Consultant', 'Legend']
 name, age, *job_title = employee_481 # job_title is now assigned a list containing the last two values
 print(f'{name} is {age} and works as a {job_title}')
 
+# .count() can be used to count how many times a value occours in a list
+# syntax is .count(value)
+my_list = [1,2,3,4,5,3]
+my_list.count(3) #returns 2
+
 # .append() is a method used to add a new entry to a list
 my_list = [1,2,3,4]
 my_list.append(5)
@@ -119,7 +124,23 @@ my_list = [1,3,2,5,4]
 my_sorted_list = sorted(my_list)
 print(my_sorted_list) # note my_list is unchanged 
 
-# .reverse() reverses the indexing of a list (1st becomes last etc)
+#you can use the key variable for .sort() to modify how they are sorted
+my_list = ['red', 'yellow', 'blue']
+my_list.sort(key=len) # this sorts a list be value length
+print(my_list) # returns ['red', 'blue', 'yellow']
+
+# you can also use the key variable for sorted()
+# in this example, its sorted by absolute value (polarity is ignored)
+my_list = [-10,-5,0,5,10]
+my_sorted_list = sorted(my_list, key=abs)
+print(my_sorted_list) # returns [0,-5,5,-10,10]
+
+# the reverse varibale can also be used by .sort() and sorted() reverse the indexing of a list
+my_list = [1,2,3,4,5]
+my_list.sort(reverse=True)
+print(my_list) # returns [5,4,3,2,1]
+
+# .reverse() also reverses the indexing of a list (1st becomes last etc)
 my_list = [1,2,3,4,5]
 my_list.reverse()
 print(my_list) # now returns [5,4,3,2,1]
@@ -129,4 +150,28 @@ my_list = [1,2,3,4,5]
 my_list.index(4) # returns an index of 3
 
 # advanced tuple functions
+# reminder - tuples are immutable (cannot be changed after creation)
 
+#you can convert an exisiting value into a tuple
+my_string = "Hello World"
+my_tuple = tuple(my_string)
+print(my_tuple) # returns ('H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd')
+
+#like lists, you can search for a value in a tuple using the 'in' operator
+my_tuple = (1,2,3,4,5)
+4 in my_tuple #returns True (Bool check)
+
+#you can also unpack tuples into varibables like lists
+my_tuple = ('Matthew', 36, 'Security Consultant')
+my_name, my_age, my_job = my_tuple
+print(f'my name is {my_name}, I am {my_age} years old and work as a {my_job}')
+#you can also use the * operator to unpack all remaining values into a variable
+
+# as with lists, tuples can use .count() and .index() functions
+# as there immutable, update functions such as sort do not work on tuples
+# however, .sorted() can be used as it generates a new object
+my_tuple = (1,3,2,5,4)
+my_sorted_tuple = sorted(my_tuple)
+print(my_sorted_tuple)
+
+#Loops
