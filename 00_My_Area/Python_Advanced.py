@@ -204,6 +204,8 @@ my_password = "password1234"
 guess = "0000"
 
 while guess != my_password:
-    guess = input("guess again")
+    guess = input("guess again: ")
 
 print("you cracked it!")
+
+#review above
