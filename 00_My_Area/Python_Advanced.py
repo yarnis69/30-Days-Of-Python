@@ -175,3 +175,35 @@ my_sorted_tuple = sorted(my_tuple)
 print(my_sorted_tuple)
 
 #Loops
+
+#Loops repeat code blocks a set number of times
+#a "for" loop does this by assigning each value in an iterable to a temp variable (e.g. food) in turn, then executing
+#syntax is - for (temp varaible) in (iterable): {indented code block}
+
+my_list = ['pizza', 'curry', 'burgers']
+
+for food in my_list:
+    print(f'my favourite food is {food}') # this prints the sentence for each entry in my_list
+
+#you can also iterante through other iterables such as strings using for loops
+my_string = "EIEIO"
+for char in my_string:
+    print(f'the next character is {char}')
+
+#for loops can also be nested (iterates again using a second iterable on each value in the first iterable)
+my_fruit_list = ['orange', 'apple', 'banana']
+my_animal_list = ['otter', 'red panda', 'alpaca']
+
+for fruit in my_fruit_list:
+    for animal in my_animal_list:
+        print(f'your randomly generated passwords are {fruit}{animal}') #this would print orangeotter, orangeredpanda, orangealpaca, appleotter, appleredpanda, etc)
+
+#while loops repeates a code block until the condition=False 
+
+my_password = "password1234"
+guess = "0000"
+
+while guess != my_password:
+    guess = input("guess again")
+
+print("you cracked it!")
