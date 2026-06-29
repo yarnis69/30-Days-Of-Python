@@ -198,14 +198,17 @@ for fruit in my_fruit_list:
     for animal in my_animal_list:
         print(f'your randomly generated passwords are {fruit}{animal}') #this would print orangeotter, orangeredpanda, orangealpaca, appleotter, appleredpanda, etc)
 
-#while loops repeates a code block until the condition=False 
+# while loops repeates a code block until the condition=False
+# in this code, the while loop repeats until guess does not equal my password is False (conditions are used for the outputs)
+# this will return "try again!" until the right password is guessed
 
 my_password = "password1234"
 guess = "0000"
 
 while guess != my_password:
-    guess = input("guess again: ")
+    guess = input("enter guess: ")
+    if guess != my_password:
+        print("try again!")
+    else:
+        print("you got it!")
 
-print("you cracked it!")
-
-#review above
