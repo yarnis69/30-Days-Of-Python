@@ -240,3 +240,17 @@ for letter in name:
         break
 else:
     print(f'your name ({name}) does not contain an a')
+
+
+# revision: ranges are used to generate a sequence of integes - range(start,stop,step) - the stop argument is NOT inclusive
+for number in range(10): 
+    print(number) # this would contain 0,1,2,3,4,5,6,7,8,9 (one argument defaults start to 0 and step to 1)
+
+# ranges can return values in reverse order by using a negative step value
+for number in range(10,0,-1):
+    print(number) # this returns 10, 9, 8 .... 1
+
+# you can also create a list of integes using the by using list
+
+numbers = list(range(1,10,2))
+print(numbers) # returns [1, 3, 5, 7, 9]
