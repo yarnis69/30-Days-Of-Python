@@ -212,3 +212,31 @@ while guess != my_password:
     else:
         print("you got it!")
 
+# break can be used to terminate a loop e.g. if a certain condition is met
+
+pokemon = ['charmander', 'bulbasaur', 'squirtle']
+
+for starters in pokemon:
+    if starters == 'bulbasaur':
+        break
+    print(starters) #this returns charmander only, as the loop is terminated at the next iteration
+
+# continue skips a single loop iteration e.g. if a certian condition is met
+
+pokemon = ['charmander', 'bulbasaur', 'squirtle']
+
+for starters in pokemon:
+    if starters == 'bulbasaur':
+        continue
+    print(starters) # this returns charmander and squirtle, as bulbasaur is skipped
+
+#an else clause can be placed after a for or while loop, which only triggers if the loop is not terminated by a break statement
+
+name = 'Matthew'
+
+for letter in name:
+    if letter.lower() == 'a':
+        print(f'your name ({name}) does  contain an a')
+        break
+else:
+    print(f'your name ({name}) does not contain an a')
