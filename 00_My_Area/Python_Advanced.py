@@ -254,3 +254,71 @@ for number in range(10,0,-1):
 
 numbers = list(range(1,10,2))
 print(numbers) # returns [1, 3, 5, 7, 9]
+
+
+
+# enumarate() can be used to return iterables in a list and their corresponding index as a series of tuples
+names = ['Tom', 'Dick', 'Harry']
+print(list(enumerate(names))) # note like a range, an enumurate object needs to be converted into a list to print its contents - returns (0,'Tom'), (1,'Dick'), (2,'Harry')
+
+# enumarate() can be used in loops to track the index of iterables
+names = ['Tom', 'Dick', 'Harry']
+for index, names in enumerate(names):
+    print(f'Name {names} has an index of {index}') # returns Name Tom has an index of 0... and so on
+
+# you can also declare a START index for enumarate by providing it as an argument, if not present it defualts to 0 - syntax is enumurate(LIST,START)
+
+names = ['Tom', 'Dick', 'Harry']
+print(list(enumerate(names, 1))) # this now returns (1, 'Tom') etc
+
+# zip() can be used to merge two lists in a series of tuples so they can be iterated through in parellel
+employees = ['John','Frank','Ian']
+employee_IDs = [3012, 3013, 3014]
+
+for employee, employee_ID in zip(employees, employee_IDs): # zip will create an object with a series of tuples ('John', 3012)... etc
+    print(f'{employee} has an Employee ID of {employee_ID}') # returns John has an Employee ID of 3012... etc
+
+
+# list comprehensions create a new list from an exisiting iterable (often a list), allowing concise code as conditions can be applied when creating the new list
+# syntax is - [expression(new item added to new list derived from the exisiting item iterable)  for  item(temp name for item in exisiting iterable)  in  iterable(i.e an exisiting list)  if  condition(optional filter condition e.g !=0)]
+
+meter_readings = [22,46,-10,102,-134]
+postive_meter_readings = [reading for reading in meter_readings if reading > 0] #note the new item and existing item are the same, as we are just adding exisiting list entries to a new list if a condition is met
+print(postive_meter_readings) # creates a list of only positve meter readings
+
+#this example does squares all numbers in a list, note no optional condition is used and the existing iterable item is modified in the new item expression
+
+numbers = [5,10,15,20]
+numbers_squared = [num**2 for num in numbers]
+print(numbers_squared) # returns the square of all numbers
+
+# filter () can also be used to create a new list from an exisiting iterable, creating a new list containing only the entries that pass a filter function
+# syntax is filter (function, iterable)
+
+numbers = [4,36,157,1000,2,34,295,943]
+
+def is_big_number(number):
+    return number > 100
+
+big_numbers = list(filter(is_big_number, numbers))
+print(big_numbers) # returns all numbes over 100
+
+# map() can be used simular to filter(), creating a new list by performing a function on all values in an exiting iterable
+# map() uses it provided funciton to change the input iterable and create a new value in the created list, rather than using that funciton to filter new list entries
+# syntax is the same - map(function,iterable)
+
+numbers = [10,20,30,40,50]
+
+def add_one(number):
+    return number+1
+
+numbers_plus_one = list(map(add_one, numbers))
+print (numbers_plus_one) # returns [11, 21, 31, 41, 51]
+
+#sum() simply provides the sum of all numbers in an iterable
+numbers = [12,35,6,25,12]
+print(sum(numbers)) # returns 90
+
+#you can also give sum a START value, which inflates the eventaul sum by an artifical START value (i.e. it doesn't start at 0)
+numbers = [12,35,6,25,12]
+print(sum(numbers,10)) # now returns 100
