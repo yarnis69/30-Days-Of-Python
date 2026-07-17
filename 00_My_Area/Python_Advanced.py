@@ -322,3 +322,15 @@ print(sum(numbers)) # returns 90
 #you can also give sum a START value, which inflates the eventaul sum by an artifical START value (i.e. it doesn't start at 0)
 numbers = [12,35,6,25,12]
 print(sum(numbers,10)) # now returns 100
+
+# lambda functions are a different type of functions that have no assigned name, they are useful for embedding funtions within higher funcitons without having to assign them a name
+# syntax is lambda argument(s): expression
+# best practice is to keep lambda funcitons reserved for simple logic within higher functions such as map() or filter()
+
+numbers = [10,20,30,40,50]
+
+numbers_plus_one = list(map(lambda number: number + 1,numbers)) # note a arbitery name of "number" is chosen for the expressions pulled in turn from the numbers list
+
+print (numbers_plus_one) # also returns [11, 21, 31, 41, 51] without having to create a named function as before
+
+
