@@ -10,9 +10,9 @@ def number_pattern(n):
 
     else:
         for number in range(1,n+1):
-            output += str(number) + ' '
+            output += ' ' + str(number)
         
         print(output)
         
 
-number_pattern(10)
+number_pattern(4)
