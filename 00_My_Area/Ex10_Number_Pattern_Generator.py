@@ -3,16 +3,16 @@ def number_pattern(n):
     output = ''
 
     if type(n) != int:
-        print("Argument must be an integer value")
+        return "Argument must be an integer value."
 
     elif n < 1:
-        print("Argument must be an integer greater than 0")
+        return "Argument must be an integer greater than 0."
 
     else:
         for number in range(1,n+1):
-            output += ' ' + str(number)
+            output += str(number) + ' '
         
-        print(output)
-        
+        return output.strip()       
 
-number_pattern(4)
+print(number_pattern(10))
+
