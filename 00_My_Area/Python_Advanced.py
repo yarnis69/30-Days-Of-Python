@@ -55,7 +55,7 @@ print(my_nested_list[2][1]) # returns 'dark blue'
 
 #you can assign list entries to new variables in turn, known as unpacking lists
 employee_481 = ['Matthew', '36', 'Security Consultant']
-name, age, job_title = employee_481 #this created 3 new variables and assigns them list entires in turn
+name, age, job_title = employee_481 # this created 3 new variables and assigns them list entires in turn
 print(f'{name} is {age} and works as a {job_title}')
 
 # using an astrisk (*) assigns all remaining list values to a variable
@@ -332,5 +332,9 @@ numbers = [10,20,30,40,50]
 numbers_plus_one = list(map(lambda number: number + 1,numbers)) # note a arbitery name of "number" is chosen for the expressions pulled in turn from the numbers list
 
 print (numbers_plus_one) # also returns [11, 21, 31, 41, 51] without having to create a named function as before
+
+
+#Dictionaires and Sets
+
 
 
