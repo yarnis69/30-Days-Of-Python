@@ -334,7 +334,29 @@ numbers_plus_one = list(map(lambda number: number + 1,numbers)) # note a arbiter
 print (numbers_plus_one) # also returns [11, 21, 31, 41, 51] without having to create a named function as before
 
 
-#Dictionaires and Sets
 
+#Dictionaires
+
+# Dictionaries store key : value pairs, syntax is {key:value}
+# Dictionaries are immuntable and each key must be unique (values can be repeated)
+my_dictionary = {'Name' : 'John',
+                 'Age' : 40,
+                 'Hair':  'Brown'}
+
+# alternative syntax
+
+my_dictionary = dict[('Name', 'John'), ('Age', 40), ('Hair', 'Brown')]
+
+# to retrive a value, you need to call the dictionary and its key - syntax is dictionary[key]
+my_dictionary['Name']
+
+# you can alternativly  use .get() to retrive values - dictionary.get(key)
+my_dictionary.get('Name')
+
+# the advantage of .get() method is a default value can be returened if the key does not exist
+my_dictionary.get('Height', 'Key does not exist') # This returns 'Key does not exist' as there is no key called Height
+
+# to update a value, simply add an assigment (=)
+my_dictionary['Name'] = 'Fred'
 
 
