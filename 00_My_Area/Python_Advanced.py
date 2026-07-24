@@ -338,14 +338,14 @@ print (numbers_plus_one) # also returns [11, 21, 31, 41, 51] without having to c
 #Dictionaires
 
 # Dictionaries store key : value pairs, syntax is {key:value}
-# Dictionaries are immuntable and each key must be unique (values can be repeated)
+# Dictionaries entries are immuntable and each key must be unique (values can be repeated)
 my_dictionary = {'Name' : 'John',
                  'Age' : 40,
                  'Hair':  'Brown'}
 
 # alternative syntax
 
-my_dictionary = dict[('Name', 'John'), ('Age', 40), ('Hair', 'Brown')]
+my_dictionary = dict([('Name', 'John'), ('Age', 40), ('Hair', 'Brown')])
 
 # to retrive a value, you need to call the dictionary and its key - syntax is dictionary[key]
 my_dictionary['Name']
@@ -358,5 +358,28 @@ my_dictionary.get('Height', 'Key does not exist') # This returns 'Key does not e
 
 # to update a value, simply add an assigment (=)
 my_dictionary['Name'] = 'Fred'
+
+# .keys() can be used to create an object that lists all keys in a dictionary
+my_dictionary.keys() # returns "dict_keys(['Name', 'Age', 'Hair'])"
+
+# .values() does the same for all values in a dictionary
+my_dictionary.values() # returns "dict_values(['John', 40, 'Brown'])"
+
+# .items() creates an object listing all key-value pairs in a dictionary
+my_dictionary.items() # returns "dict_items([('Name', 'John'), ('Age', 40), ('Hair', 'Brown')])"
+
+# .clear() can be used to empty a dictionary
+my_dictionary.clear()
+
+# .pop removes a specific key:value pair and returns its value (by declaring that pair's key)
+my_dictionary.pop('Age') # returns 40 and deletes the key:value pair 'Age':40
+
+# .popitem() removes and returns the last inserted key:value pair
+my_dictionary.popitem() # returns and deletes 'Hair':'Brown' as it was the last inserted key:value pair
+
+# .update({}) can be used to update a multiple key:value pairs in a dictionary - if the key already exists it will update the value, if it does not it will create a new entry
+# note the updates need to be nested in ({})
+my_dictionary.update({'Age':30, 'Height':"192cm"}) # 'Age' now has a value of 30, and a new key:value pair of 'Height':'192cm' has been added
+
 
 
