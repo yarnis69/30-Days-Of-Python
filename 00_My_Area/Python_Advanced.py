@@ -425,6 +425,16 @@ for index, price in enumerate(car_prices.values()):
 
 
 
+# Sets are unordered, mutable (entires can be updated) and do not allow duplicates
+
+my_set = {10, 20, 30}
+
+# As sets and dictionaries share curly brackets, an empty set must be created using set() - {} creates a dictionary
+
+my_empty_set = set()
+
+
+
 
 
 
