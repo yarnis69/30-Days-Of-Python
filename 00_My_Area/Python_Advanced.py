@@ -359,7 +359,7 @@ my_dictionary.get('Height', 'Key does not exist') # This returns 'Key does not e
 # to update a value, simply add an assigment (=)
 my_dictionary['Name'] = 'Fred'
 
-# .keys() can be used to create an object that lists all keys in a dictionary
+# .keys() can be used to create an view object that lists all keys in a dictionary
 my_dictionary.keys() # returns "dict_keys(['Name', 'Age', 'Hair'])"
 
 # .values() does the same for all values in a dictionary
@@ -380,6 +380,53 @@ my_dictionary.popitem() # returns and deletes 'Hair':'Brown' as it was the last 
 # .update({}) can be used to update a multiple key:value pairs in a dictionary - if the key already exists it will update the value, if it does not it will create a new entry
 # note the updates need to be nested in ({})
 my_dictionary.update({'Age':30, 'Height':"192cm"}) # 'Age' now has a value of 30, and a new key:value pair of 'Height':'192cm' has been added
+
+
+# By default, when you loop on dictionaries it iterates on the keys only
+
+car_prices = {'Tesla' : 50000,'Skoda' : 40000, 'Ford' : 30000}
+
+for car in car_prices:
+    print(car) # returns Tesla Skoda Ford
+
+# To loop on values, you need to create a view object containing all dictionary values using .values()
+
+for price in car_prices.values():
+    print(price) # now returns 50000 40000 30000
+
+# To use loop on both keys and values in a dictionary, you can use a view object containing both using .items()
+
+for car_name, car_price in car_prices.items():
+    print (f'the {car_name} costs {car_price}') # returns 'the Tesla costs 50000.....'
+
+# .update() can be used in a loop to modify a dictionaries values, in this example 20% is taken off each price
+
+car_prices = {'Tesla' : 50000,'Skoda' : 40000, 'Ford' : 30000}
+
+for car_name, car_price in car_prices.items():
+    car_prices.update({car_name:int(car_price*0.8)})
+
+print(car_prices) # car_prices now returns {'Tesla': 40000, 'Skoda': 32000, 'Ford': 24000}
+
+# as with lists, enumerate() can be used to assign an integer to each key value pair when working on them in loops
+
+for car in enumerate(car_prices):
+    print(car) # returns (0, 'Tesla') (1, 'Skoda'), (2, 'Ford') - each key has been assigned an integer to form a tuple
+
+# or they can be seperated in the loop (not in enumarate objects, the index comes first)
+
+for index, car in enumerate(car_prices):
+    print(f'{car} has an index of {index}') # returns "Tesla has an index of 0....""
+
+# you can also use enumerate with values rather than keys using the .values() method
+
+for index, price in enumerate(car_prices.values()):
+    print(index, price) # returns 0 40000 etc
+
+
+
+
+
 
 
 
