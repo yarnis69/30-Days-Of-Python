@@ -429,7 +429,7 @@ for index, price in enumerate(car_prices.values()):
 
 my_set = {10, 20, 30}
 
-# As sets and dictionaries share curly brackets, an empty set must be created using set() - {} creates a dictionary
+# As sets and dictionaries share curly brackets in their syntax, an empty set must be created using set() - {} creates a dictionary
 
 my_empty_set = set()
 
@@ -445,9 +445,47 @@ my_set.discard(40)
 # .clear() deletes all values in a set
 my_set.clear()
 
+# .issubset() and .issuperset() can be used to check if a set is sub or super set of another
+
+animals = {'dog', 'cat', 'badger', 'hedgehog'}
+pets = {'cat', 'dog'}
+
+animals.issubset(pets) # this checks if animals is a subset of pets = False (as not all entires in animals is in pets)
+animals.issuperset(pets) # this checks if animals is superset of pets = True (as all entries in pets is in animals)
+
+# .isdisjoint() checks if two sets are "disjointed" - which means the have no values in common
+
+animals.isdisjoint(pets) # returns False as they have two values in common
+
+# the union (|) operator can be used to combine sets (duplicates across both are ignored)
+
+my_set_1 = {1,2,3,4,5,6,7}
+my_set_2 = {6,7,8,9,10}
+
+my_set_1 | my_set_2 # this returns {1,2,3,4,5,6,7,8,9,10}
+my_set_3 = my_set_1 | my_set_2 # this assigns it to a new set
+
+# the intersection (&) operator returns only values the sets have in common
+
+my_set_1 & my_set_2 # returns {6, 7} as they are common values for both sets 
+
+# the difference (-) operator returns the values which are in the first set but NOT in the other set(s)
+
+my_set_1 - my_set_2 # returns {1,2,3,4,5} as they are not in set 2 but are in set 1
+
+# the symmetic difference (^) operator returns values that are in either set, but ommitting those that are in both
+
+my_set_1 ^ my_set_2 # returns {1,2,3,4,5,8,9,10}, ommiting 6 and 7 as they are in both
+
+# all of these operators can be combined with (=) to assign the result to the first set in the expression (|= &= -= ^=)
+
+my_set_1 |= my_set_2 # my_set_1 now contains all values in both sets {1,2,3,4,5,6,7,8,9,10}
+
+# you can also check if a value is in set using the in operator
+
+print(3 in my_set_1) # True as 3 is in my_set_1
 
 
 
-
-
+#python modules
 
