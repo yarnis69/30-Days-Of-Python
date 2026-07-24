@@ -433,6 +433,17 @@ my_set = {10, 20, 30}
 
 my_empty_set = set()
 
+# .add() can be used to add a value to an existing set, note if it already exists there is no error message but only one is kept
+my_set.add(40)
+
+# .remove() can be used to remove a value from an existing set, if it does not exist an error message is produced
+my_set.remove(40)
+
+# .discard() works identically to .remove(), but no error message is produced if the value does not exist in the set
+my_set.discard(40)
+
+# .clear() deletes all values in a set
+my_set.clear()
 
 
 
