@@ -495,10 +495,55 @@ print(3 in my_set_1) # True as 3 is in my_set_1
 # modules are imported using the import command - good practice is to do this at the start of your code
 
 import math # imports the math module
-import random # imports the random module
-import datetime #imports the datetime module
 
 # to call functions from an imported module, the syntax is module_name.function_name()
 
 math.sqrt(25) # this will calcualtes the square root of 25 (= 5)
+
+# for brevity, you can also import a module and assign it a local name to use when you call it
+
+import math as m # gives the math module the local name m
+
+m.sqrt(25) # you can now call math functions using m.
+
+# alternativly, you can only import specfic element from a library 
+
+from math import sqrt # this imports sqrt funtion only
+
+sqrt(25) # note the module prefix is not reqruired as the function has been directly imported
+
+# you can also give imported elements aliases using as
+
+from math import sqrt as square_root
+
+square_root(25)
+
+# you can also import all elements from a library using * - this method means you don't need to use the module prefix (all directly imported)
+# note this not considered good practice, as it can lead to naming collisions when multiple modules are imported directly
+
+from math import *
+
+sqrt(25)
+
+# Note python modules don't only contain functions, for example:
+
+import math
+print(math.pi) # provides a static float value for Pi (3.141....)
+
+
+
+# its important to note that python has a defualt variable (__name__)
+
+print(__name__) # this is a default value set to (__main__) by Python files when they are directly executed
+
+# however, if a python files is imported as a module using an import statement, it changes (__name__) to the name of the module (e.g. math.py)
+# this is important as it allows certain code to be ignored if its imported as a module using the following condition
+
+if __name__ == '__main__': # this can be applied to code that is only intended to be ran if executed directly (main logic), not pulled in as a module
+    pass
+
+# this allows a single python file to be used both as an executable, and a module usable by other python files
+
+
+
 
