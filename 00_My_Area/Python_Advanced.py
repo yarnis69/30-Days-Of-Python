@@ -487,9 +487,9 @@ print(3 in my_set_1) # True as 3 is in my_set_1
 
 
 
-# python modules
+# python modules (Python Standard Libraries)
 
-# python modules can be imported from exsiting python libraries to allow easy access to pre-defined useful code (functions, classes, data structures etc)
+# python modules can be imported from exsiting python standard libraries to allow easy access to pre-defined useful code (functions, classes, data structures etc)
 # examples include math (advanced maths module), random (random number generation module) and datetime (date and time module)
 
 # modules are imported using the import command - good practice is to do this at the start of your code
