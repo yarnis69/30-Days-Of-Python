@@ -577,3 +577,8 @@ def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_v
     return constraints
 
 
+# all function
+# The all function returns True if all iterables passed to it are Truthy, and False if not
+
+my_list = [1,2,3]
+print(all(my_list)) # prints True as 1,2,3 are all truthy values (if 0 was added to the list it would print False)
