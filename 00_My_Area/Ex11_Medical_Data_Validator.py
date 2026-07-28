@@ -1,3 +1,6 @@
+import re
+
+
 medical_records = [
     {
         'patient_id': 'P1001',
@@ -33,21 +36,30 @@ medical_records = [
     }
 ]
 
+
 def validate(data):
 
     is_sequence = isinstance(data,(list, tuple))
+
+    key_set = set(['patient_id', 'age', 'gender', 'diagnosis', 'medications', 'last_visit_id'])
+
 
     if not is_sequence:
         print('Invalid format: expected a list or tuple.')
         return False
 
-
     is_invalid = False
 
     for index, dictionary in enumerate(data):
+
         if not isinstance(dictionary, dict):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
+
+        if set(dictionary.keys()) != key_set:
+            print(f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.') 
+            is_invalid = True  
+
 
     if is_invalid == True:
         return False
@@ -55,6 +67,10 @@ def validate(data):
     print('Valid format.')
     return True
 
-    
 
-validate(medical_records)
+def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_visit_id):
+    constraints = {'patient_id':isinstance(patient_id,str) and re.fullmatch('p\d+',patient_id,re.IGNORECASE)}
+    return constraints
+
+
+print(find_invalid_records(**medical_records[0]))

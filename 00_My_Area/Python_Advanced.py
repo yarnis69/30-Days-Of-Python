@@ -423,7 +423,15 @@ for index, car in enumerate(car_prices):
 for index, price in enumerate(car_prices.values()):
     print(index, price) # returns 0 40000 etc
 
+# you can also unpack dictionaires, including into funcitons as an argument
+# the double asterisk (**) operator is required to unpack key:value pairs - if the normal * is used only the keys are unpacked
 
+def sum(a,b,c):
+    return a + b + c
+
+my_numbers = {'a':10, 'b':20, 'c':30}
+
+print(sum(**my_numbers)) # returns 60
 
 # Sets are unordered, mutable (entires can be updated) and do not allow duplicates
 
@@ -544,6 +552,28 @@ if __name__ == '__main__': # this can be applied to code that is only intended t
 
 # this allows a single python file to be used both as an executable, and a module usable by other python files
 
+#regex
 
+import re #import regex library
+
+my_string = 'Hello World 123'
+
+# syntax is re.search('string', variable)
+
+print(re.search('hello', my_string)) # the searches for 'Hello' in my_string - returing a regex search object if found, NONE if not
+
+print(re.search('hello', my_string, re.IGNORECASE)) # this adds a flag that ignores case when searching (now returns an object)
+
+print(re.search('hello world \d', my_string, re.IGNORECASE)) # \d looks for any digit in regex searches (object returns Hello World 1)
+
+print(re.search('hello world \d+', my_string, re.IGNORECASE)) # the plus operator looks for 1+ digits in regex searches (object returns Hello World 123)
+
+print(re.fullmatch('hello world \d+', my_string, re.IGNORECASE)) # replacing search with fullmatch only returns an object if that exact string is found (any chars before or after = NONE)
+
+
+
+def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_visit_id):
+    constraints = {'patient_id':isinstance(patient_id,str) and re.search('p\d+',patient_id,re.IGNORECASE)}
+    return constraints
 
 
