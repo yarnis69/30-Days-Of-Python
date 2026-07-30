@@ -583,3 +583,19 @@ def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_v
 
 my_list = [1,2,3]
 print(all(my_list)) # prints True as 1,2,3 are all truthy values (if 0 was added to the list it would print False)
+
+
+
+# Debugging
+
+# The Python pdb module can be used for interactive debugging
+
+import pdb
+
+def square_value(n):
+    pdb.set_trace()
+    return n**2
+
+print(square_value(5))
+
+# the above opens an interactive pdb prompt scoped within the square_value function
