@@ -586,9 +586,13 @@ print(all(my_list)) # prints True as 1,2,3 are all truthy values (if 0 was added
 
 
 
+
 # Debugging
 
-# The Python pdb module can be used for interactive debugging
+# Entering Print() commands in your code is a simple way to check your code is behaving as expected
+
+
+# Alternativly, he Python pdb module can be used for interactive debugging
 
 import pdb
 
@@ -598,4 +602,17 @@ def square_value(n):
 
 print(square_value(5))
 
-# the above opens an interactive pdb prompt scoped within the square_value function
+# the above opens an interactive pdb prompt within the square_value function
+# note that where the code is paused .set_trace() is run, and you can only access variables available from that point in the code
+# once in the pbb prompt you can than run debugging commands (the below can only be run in the (Pdb) prompt)
+
+help # returns the list of options
+
+whatis n # returns the type of object, in this case for paramater n (integer)
+
+whatis square_value # returns that square_value is a Function
+
+continue # continues to execute the rest of the code (in this case printing a result of 25)
+
+
+# IDEs such as VS Code also offer native debugging features/tools
