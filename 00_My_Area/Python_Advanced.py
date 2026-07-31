@@ -606,13 +606,18 @@ print(square_value(5))
 # note that where the code is paused .set_trace() is run, and you can only access variables available from that point in the code
 # once in the pbb prompt you can than run debugging commands (the below can only be run in the (Pdb) prompt)
 
-help # returns the list of options
+# help # returns the list of options
 
-whatis n # returns the type of object, in this case for paramater n (integer)
+# whatis n # returns the type of object, in this case for paramater n (integer)
 
-whatis square_value # returns that square_value is a Function
+# whatis square_value # returns that square_value is a Function
 
-continue # continues to execute the rest of the code (in this case printing a result of 25)
+# continue # continues to execute the rest of the code (in this case printing a result of 25)
 
 
 # IDEs such as VS Code also offer native debugging features/tools
+
+def square_value(n):
+    return n**2
+# the red dot to the left
+print(square_value(5))
