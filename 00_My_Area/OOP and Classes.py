@@ -1,12 +1,11 @@
-# Classes are blueprints for creating objects, grouping together objects that 
-# share common behaviours/attributes
+# Classes are blueprints for creating objects, grouping together objects that share common behaviours/attributes
 
 class Dog:
     def __init__(self, name, breed):
         self.name = name
         self.breed = breed
 
-# every class must have a function called __init__ (DOUBLE UNDERSCORES) which defines the attributes each object created
+# every class must have a function called __init__ (DOUBLE UNDERSCORES) which defines the data attributes each object created
 # from that class possesses - e.g. name, breed, age etc
 
 
@@ -20,7 +19,8 @@ dog_1 = Dog("Charlie","Border Terrier")
 print(dog_1.name)
 print(dog_1.breed)
 
-# Once the class attrubities have been defined by __init__ - class behaviours can be defined using functions
+# Once the class attrubities have been defined by __init__ - class methods (behaviours) can be defined using functions
+# methods are accessed by using the dot notation (object_name.method_name)
 # Note that you need to pass self to the function to enable it pull in object attributes
 
 class Dog:
@@ -34,3 +34,20 @@ class Dog:
 dog_2 = Dog("Maple", "Golden Doodle")
 
 dog_2.bark()
+
+# The attributes set above are INSTANCE ATTRIBUTES as they are unique for each object created from that class
+# CLASS ATTRIBUTES which are common to all objects created from a class can also be set:
+
+class Dog:
+
+        Best_Pet = True
+        
+        def __init__(self, name, breed):
+            self.name = name
+            self.breed = breed
+
+dog_2 = Dog("Maple", "Golden Doodle")
+
+print(dog_2.Best_Pet) # resolved to True as it inherted it from the class as a CLASS ATTRIBUTE
+
+print(Dog.Best_Pet) # as it belongs to the class, you can also access class attriutes by refrencing the class rather than an instance
